@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <style>
+        body {
+            background-color: #9EC16C;
+        }
+
+        .chart {
+            width: 1024px;
+            height: 768px;
+            line-height: 768px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .chart div {
+            border-right: 5px solid #9EC16C;
+            background: red;
+            width: 25%;
+            display: inline-block;
+            vertical-align: bottom;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .chart div label {
+            position: absolute;
+            bottom: 3px;
+            font-weight: bolder;
+            color: rgba(255, 255, 255, .50);
+            text-shadow: .1em .1em #333;
+            margin: auto;
+            width: 100%;
+            text-align: center;
+            line-height: 1em;
+            font-family: Consolas;
+            font-size: 1.3em;
+        }
+
+        .chart table {
+            position: absolute;
+            left: 0;
+        }
+
+        .chart table tr td {
+            vertical-align: top;
+            height: 185px;
+            line-height: 1em;
+        }
+    </style>
+    <body>
+        <div class='chart'>
+            <table>
+                <tr>
+                    <td>
+                       20 -
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                       15 -
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                       10 -
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                       5 -
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                       0 -
+                    </td>
+                </tr>
+            </table>
+            <div class='accepted' style="height: <%=acceptedPercentage%>%;background-color: #21409A;">
+                <label>Accepted</label>
+            </div><!--
+         --><div class='bugs' style="height: <%=bugsPercentage%>%;background-color: #A10303;">
+                <label>Bugs</label>
+            </div><!--
+         --><div class='chores' style="height: <%=choresPercentage%>%;background-color: #F58220;">
+                <label>Chores</label>
+            </div><!--
+         --><div class='grc_support_tickets' style="height: <%=grcSupportTicketsPercentage%>%;background-color:brown;">
+                <label>GRC Support Tickets</label>
+            </div>
+        </div>
+    </body>
+</html>
